@@ -1,0 +1,20 @@
+.cart-page {
+  min-height: 80vh;
+}
+
+.cart-img {
+  width: 100%;
+  max-width: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-summary h5 {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .cart-img {
+    max-width: 80px;
+  }
+}

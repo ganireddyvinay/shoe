@@ -1,0 +1,182 @@
+/* RESET global margins & paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #040731; /* dark navy tone */
+  color: white;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Full-width layout – NO side gaps */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+/* Brand (only natural width) */
+.brand {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-text {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  padding-right: 5px;
+  margin-left: 10px;
+}
+
+/* Center Nav Links */
+.nav-links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  transition: all 0.4s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffa600;
+}
+
+/* Right Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.cart-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 1px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ✅ Cart Badge */
+.cart-count {
+  background: crimson;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+
+/* Sign Up Button */
+.btn.signup {
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: rgb(10, 10, 10);
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.signup:hover {
+  background-color: #005ab3;
+  transform: translateY(-2px);
+  color:white
+}
+
+/* Hamburger for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2.5px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #040731;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px);
+  }
+}

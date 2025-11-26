@@ -1,0 +1,45 @@
+/* Banner Container */
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto;          /* Important fix */
+  max-height: 100dvh;    /* Modern mobile-safe viewport height */
+}
+
+/* Slider Wrapper */
+.banner-slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+}
+
+/* Banner Images */
+.banner-image {
+  width: 100%;
+  height: auto;          /* Responsive height */
+  max-height: 100dvh;    /* Prevent stretching */
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+@media (max-width: 1024px) {
+  .banner-image {
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-image {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    max-height: 45vh;
+  }
+}

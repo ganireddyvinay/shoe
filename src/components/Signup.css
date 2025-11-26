@@ -1,0 +1,84 @@
+/* Popup background blur */
+.signup-popup .modal-content {
+  border-radius: 18px;
+  padding: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 6px 26px rgba(0,0,0,0.15);
+  animation: popupFade 0.35s ease;
+}
+
+/* Smooth fade animation */
+@keyframes popupFade {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Title styling */
+.signup-title {
+  font-size: 1.6rem;
+  color: #111;
+  text-align: center;
+}
+
+.signup-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -4px;
+}
+
+/* Label */
+.signup-label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input fields */
+.signup-input {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.signup-input:focus {
+  border-color: #000;
+  box-shadow: none;
+  background: #fff;
+}
+
+/* Button */
+.signup-btn {
+  background: #000;
+  border: none;
+  height: 45px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  background: #333;
+}
+
+/* Footer */
+.signup-footer-text {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+  .signup-popup .modal-content {
+    margin: 10px;
+    padding: 15px;
+  }
+  .signup-title {
+    font-size: 1.3rem;
+  }
+  .signup-input,
+  .signup-btn {
+    height: 42px;
+  }
+}
