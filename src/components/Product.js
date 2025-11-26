@@ -3,7 +3,6 @@ import { products } from "../data";
 import { Button, Alert } from "react-bootstrap";
 import { CartContext } from "../context/CartContext";
 import "./Product.css";
-import { motion } from "framer-motion";
 
 
 function Product() {
